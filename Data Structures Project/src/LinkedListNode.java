@@ -1,5 +1,7 @@
+import java.io.Serializable;
 
-public class LinkedListNode {
+public class LinkedListNode implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private Place data;
 	private LinkedListNode next;
 	

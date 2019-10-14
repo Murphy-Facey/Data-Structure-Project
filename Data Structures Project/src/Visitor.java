@@ -35,15 +35,17 @@ public class Visitor {
 		this.email = email;
 	}
 	
-	public void getCommands(String command) {
+	public String getCommands(String command) {
 		if(command.contains("Gimmi all a di place dem inna")) {
 			String parishName = command.substring(30);
 			getAllDiPlaceInnna(parishName);
-			
+			return parishName;
 		} else if(command.contains("Which part have di cheapest")) {
 			String attractionName = command.substring(28);
 			getCheapestAttraction(attractionName);
+			return attractionName;
 		}
+		return null;
 	}
 	
 	private void getAllDiPlaceInnna(String parishName) {
